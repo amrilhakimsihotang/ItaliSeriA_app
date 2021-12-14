@@ -34,7 +34,7 @@ class SeriaAdapter : RecyclerView.Adapter<SeriaAdapter.ListViewHolder>() {
 
         init {
             binding.root.setOnClickListener {
-                onItemClick?.invoke(listData[adapterPosition])
+                onItemClick?.invoke(listData[absoluteAdapterPosition])
             }
         }
 
