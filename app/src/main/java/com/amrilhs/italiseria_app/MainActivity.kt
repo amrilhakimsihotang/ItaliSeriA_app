@@ -62,8 +62,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment, fragment)
                 .commit()
+            supportActionBar?.title = title
         }
-        supportActionBar?.title = title
+
 
         mainBinding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
