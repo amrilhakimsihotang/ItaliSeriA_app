@@ -8,12 +8,12 @@ plugins {
 apply from: '../shared_dependencies.gradle'
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.amrilhs.italiseria_app"
         minSdk 26
-        targetSdk 31
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -36,8 +36,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    compileSdkVersion 31
+    compileSdk 33
     dynamicFeatures = [':favorite']
+    namespace 'com.amrilhs.italiseria_app'
 }
 dependencies {
     implementation project(":core")
