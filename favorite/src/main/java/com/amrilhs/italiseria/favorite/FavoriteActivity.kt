@@ -52,7 +52,7 @@ class FavoriteActivity : AppCompatActivity() {
             startActivity(mIntent)
         }
 
-        favoriteViewModel.favoriteTeam.observe(this, { dataTeam ->
+        favoriteViewModel.favoriteTeam.observe(this) { dataTeam ->
             if (dataTeam != null) {
                 seriaAdapter.setData(dataTeam)
                 favoriteBinding.viewEmpty.root.visibility =
@@ -66,12 +66,12 @@ class FavoriteActivity : AppCompatActivity() {
 
             }
 
-        })
+        }
 
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        onBackPressedDispatcher.onBackPressed()
         return true
     }
 }
